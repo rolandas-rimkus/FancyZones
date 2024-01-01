@@ -131,6 +131,7 @@ Write-Host "[INFO] Temp directory cleanup"
 Remove-Item -Recurse -Force "$PSScriptRoot\temp" | Out-Null
 
 Write-Host "[INFO] Helper script deployment"
+Copy-Item "$PSScriptRoot\GenerateDeployment.ps1" "$PSScriptRoot\bin\GenerateDeployment.ps1"
 Copy-Item "$PSScriptRoot\PowerToys.FancyZones.Configure.ps1" "$PSScriptRoot\bin\PowerToys.FancyZones.Configure.ps1"
 Copy-Item "$PSScriptRoot\PowerToys.FancyZones.Restart.ps1" "$PSScriptRoot\bin\PowerToys.FancyZones.Restart.ps1"
 
