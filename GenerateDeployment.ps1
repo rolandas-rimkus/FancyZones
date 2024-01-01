@@ -136,3 +136,4 @@ Copy-Item "$PSScriptRoot\PowerToys.FancyZones.Restart.ps1" "$PSScriptRoot\bin\Po
 
 Write-Host "[INFO] Generating deployment .zip"
 [System.IO.Compression.ZipFile]::CreateFromDirectory("$PSScriptRoot\bin", "$PSScriptRoot\PowerToys.FancyZones.zip")
+Get-FileHash "$PSScriptRoot\PowerToys.FancyZones.zip" | foreach { Write-Host "[INFO] Deployment .zip SHA256 hash : $($_.Hash)" }
