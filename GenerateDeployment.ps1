@@ -112,7 +112,6 @@ $FancyZoneFiles += "System.Windows.Controls.Ribbon.dll"
 $FancyZoneFiles += "System.Windows.Extensions.dll"
 $FancyZoneFiles += "System.Xaml.dll"
 $FancyZoneFiles += "System.Xml.ReaderWriter.dll"
-$FancyZoneFiles += "UIAutomationCore.dll"
 $FancyZoneFiles += "UIAutomationProvider.dll"
 $FancyZoneFiles += "UIAutomationTypes.dll"
 $FancyZoneFiles += "vcruntime140.dll"
@@ -126,13 +125,10 @@ $FancyZoneFiles += "wpfgfx_cor3.dll"
 function ForceMoveItem([string]$Path, [string]$Destination) {
     $DestinationDir = Split-Path $destination
     if (!([System.IO.Directory]::Exists($DestinationDir))) { [System.IO.Directory]::CreateDirectory($DestinationDir) | Out-Null }
-    Move-Item $path $destination
+    Copy-Item $path $destination
 }
 
 $FancyZoneFiles | foreach { ForceMoveItem "$PSScriptRoot\temp\PowerToysUserSetup\MSI\PowerToys\$($_)" "$PSScriptRoot\bin\$($_)" }
-
-Write-Host "[INFO] Temp directory cleanup"
-Remove-Item -Recurse -Force "$PSScriptRoot\temp" | Out-Null
 
 Write-Host "[INFO] Helper script deployment"
 Copy-Item "$PSScriptRoot\GenerateDeployment.ps1" "$PSScriptRoot\bin\GenerateDeployment.ps1"
