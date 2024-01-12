@@ -28,7 +28,7 @@ Custom https://github.com/microsoft/PowerToys re-deployment to run FancyZones st
 - Run `temp\PowerToysUserSetup\MSI\PowerToys\PowerToys.FancyZones.exe`
 - Drag windows to the created layout to test that Fancy Zones works as expected
 - Make sure `temp\PowerToysUserSetup\MSI\PowerToys\PowerToys.FancyZones.exe` is not running anymore in the background
-- Check ProcMon output and export the accessed file list using `Tools` > `File Summary`. Update the `FancyZonesFiles.txt` with new list of files that fancy zones accessed during runtime.
+- Check ProcMon output and export the accessed file list using `Tools` > `File Summary`. Update the `FancyZonesDependencies.txt` with new list of files that fancy zones accessed during runtime.
   This list will be used to only deliver the binaries that Fancy Zones requires to work instead of the full PowerToys deployment.
 - Delete `temp`, `bin`, `PowerToys.FancyZones.zip` and rerun the deployment
 - Test running the FancyZones from the `bin` folder. If everything works properly deploy the ZIP as a new release in GitHub
