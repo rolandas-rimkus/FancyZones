@@ -14,7 +14,7 @@ Custom https://github.com/microsoft/PowerToys re-deployment to run FancyZones st
   Use `PowerToys.FancyZones.Restart.ps1` to do so or manually kill the `PowerToys.FancyZones.exe` using Task Manager and run it again.
 
 # Updating to latest version of PowerToys
-- Update PowerToysUrl under GenerateDeployment.ps1 to latest PowerToys with changes to FancyZones
+- Update `PowerToysUrl` under `GenerateDeployment.ps1` to latest PowerToys with changes to FancyZones
 - Run `GenerateDeployment.ps1` using command: `powershell -ExecutionPolicy Bypass -File GenerateDeployment.ps1`
 - Run `temp\PowerToysUserSetup\MSI\PowerToys\PowerToys.exe`
 - Configure all the FancyZones related settings using the provided UI
