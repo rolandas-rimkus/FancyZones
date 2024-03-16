@@ -6,7 +6,7 @@ $ProgressPreference = 'SilentlyContinue'
 Add-Type -Assembly "System.IO.Compression.Filesystem"
 
 # TODO: Update PowerToysUrl if there is a newer version of PowerToys with changes to FancyZones under: https://github.com/microsoft/PowerToys/releases
-$PowerToysUrl = "https://github.com/microsoft/PowerToys/releases/download/v0.77.0/PowerToysUserSetup-0.77.0-x64.exe"
+$PowerToysUrl = "https://github.com/microsoft/PowerToys/releases/download/v0.79.0/PowerToysUserSetup-0.79.0-x64.exe"
 
 function MoveItem([string]$Path, [string]$Destination) {
     if (([System.IO.File]::Exists($Path))) {

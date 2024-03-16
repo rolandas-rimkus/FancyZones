@@ -138,6 +138,7 @@ WindowsFormsIntegration.dll
 WINMM.dll
 winnlsres.dll
 WinRT.Runtime.dll
+Wldp.dll
 wpfgfx_cor3.dll
 wtsapi32.dll
 WtsApi32.dll
